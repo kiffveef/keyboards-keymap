@@ -8,8 +8,7 @@
 #define VIAL_UNLOCK_COMBO_ROWS {0, 0}
 #define VIAL_UNLOCK_COMBO_COLS {0, 1}
 
-// 8レイヤー
-#define DYNAMIC_KEYMAP_LAYER_COUNT 8
+#define DYNAMIC_KEYMAP_LAYER_COUNT 6
 
 // ホールド判定を500msに延長 (デフォルト200msだとMod-Tapがタップと誤判定される)
 #define TAPPING_TERM 300
