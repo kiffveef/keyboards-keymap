@@ -2,6 +2,7 @@
 
 RGB_MATRIX_EFFECT(RAINDROPS_WARM)
 RGB_MATRIX_EFFECT(RAINDROPS_COOL)
+RGB_MATRIX_EFFECT(OCEAN_GRADIENT)
 
 #ifdef RGB_MATRIX_CUSTOM_EFFECT_IMPLS
 
@@ -57,6 +58,22 @@ static bool RAINDROPS_COOL(effect_params_t* params) {
         index = RGB_MATRIX_LED_COUNT + 1;
     }
     return rgb_matrix_check_finished_leds(led_max);
+}
+
+// 静的シアン〜ブルーグラデーション: キーのx座標でHueを決定
+static bool OCEAN_GRADIENT(effect_params_t* params) {
+	RGB_MATRIX_USE_LIMITS(led_min, led_max);
+	for (uint8_t i = led_min; i < led_max; i++) {
+		if (!HAS_ANY_FLAGS(g_led_config.flags[i], params->flags)) continue;
+		// x座標(0-224)をシアン(128)〜ブルー(170)にマッピング
+		hsv_t hsv;
+		hsv.h = 128 + (uint8_t)((uint16_t)g_led_config.point[i].x * 42 / 224);
+		hsv.s = 255;
+		hsv.v = rgb_matrix_config.hsv.v;
+		rgb_t rgb = rgb_matrix_hsv_to_rgb(hsv);
+		rgb_matrix_set_color(i, rgb.r, rgb.g, rgb.b);
+	}
+	return rgb_matrix_check_finished_leds(led_max);
 }
 
 #endif // RGB_MATRIX_CUSTOM_EFFECT_IMPLS

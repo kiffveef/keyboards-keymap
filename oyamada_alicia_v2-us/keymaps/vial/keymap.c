@@ -117,10 +117,6 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 		hsv.h = 21;  //ORANGE
 	} else if (current_layer == 5) {
 		hsv.h = 192; //PURPLE
-	} else if (current_layer == 6) {
-		hsv.h = 170; //BLUE
-	} else if (current_layer == 7) {
-		hsv.h = 0;   //RED
 	}
 	RGB rgb = hsv_to_rgb(hsv);
 
