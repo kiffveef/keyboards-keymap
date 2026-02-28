@@ -8,7 +8,7 @@
 // Vial GUIのComboタブでレイヤー直接移動(RGUI+数字キー位置)を設定可能にする
 #define VIAL_COMBO_ENTRIES 8
 
-// ホールド判定を500msに延長 (デフォルト200msだとMod-Tapがタップと誤判定される)
+// ホールド判定を300msに延長 (デフォルト200msだとMod-Tapがタップと誤判定される)
 #define TAPPING_TERM 300
 // ホールド中に別キーを押した場合もホールド(Ctrl)として解釈する
 #define HOLD_ON_OTHER_KEY_PRESS

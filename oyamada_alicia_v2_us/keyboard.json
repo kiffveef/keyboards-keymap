@@ -60,7 +60,7 @@
     "hue_wave": true,
     "pixel_fractal": false,
     "pixel_flow": true,
-    "pixel_rain": true,
+    "pixel_rain": false,
     "typing_heatmap": true,
     "digital_rain": true,
     "solid_reactive_simple": true,
@@ -74,7 +74,7 @@
     "splash": true,
     "multisplash": true,
     "solid_splash": true,
-    "solid_multisplash": true,
+    "solid_multisplash": false,
     "starlight": true,
     "starlight_dual_sat": true,
     "starlight_dual_hue": true,
@@ -107,7 +107,7 @@
     {"matrix": [1, 9], "x": 180, "y": 10, "flags": 4},
     {"matrix": [1, 10], "x": 200, "y": 10, "flags": 4},
     {"matrix": [1, 11], "x": 220, "y": 10, "flags": 4},
-    {"matrix": [0, 12], "x": 224, "y": 10, "flags": 4},
+    {"matrix": [1, 12], "x": 224, "y": 10, "flags": 4},
 
     {"matrix": [2, 0], "x":  0, "y": 20, "flags": 4},
     {"matrix": [2, 1], "x": 20, "y": 20, "flags": 4},
@@ -123,13 +123,13 @@
     {"matrix": [2, 11], "x": 224, "y": 20, "flags": 4},
 
     {"matrix": [3, 0], "x": 0, "y": 30, "flags": 4},
-    {"matrix": [3, 1], "x": 40, "y": 30, "flags": 4},
-    {"matrix": [3, 2], "x": 70, "y": 30, "flags": 4},
-    {"matrix": [3, 3], "x": 100, "y": 30, "flags": 4},
-    {"matrix": [3, 4], "x": 120, "y": 30, "flags": 4},
-    {"matrix": [3, 5], "x": 150, "y": 30, "flags": 4},
-    {"matrix": [3, 6], "x": 180, "y": 30, "flags": 4},
-    {"matrix": [3, 7], "x": 200, "y": 30, "flags": 4}
+    {"matrix": [3, 2], "x": 40, "y": 30, "flags": 4},
+    {"matrix": [3, 3], "x": 70, "y": 30, "flags": 4},
+    {"matrix": [3, 5], "x": 100, "y": 30, "flags": 4},
+    {"matrix": [3, 6], "x": 120, "y": 30, "flags": 4},
+    {"matrix": [3, 7], "x": 150, "y": 30, "flags": 4},
+    {"matrix": [3, 8], "x": 180, "y": 30, "flags": 4},
+    {"matrix": [3, 11], "x": 200, "y": 30, "flags": 4}
   ]
 },
   "matrix_pins": {

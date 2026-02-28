@@ -106,18 +106,10 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 	// デフォルトレイヤーではインジケーター非表示
 	if (current_layer == 0) return false;
 
-	HSV hsv = {0, 255, rgb_matrix_get_val()};
-	if (current_layer == 1) {
-		hsv.h = 213; //MAGENTA
-	} else if (current_layer == 2) {
-		hsv.h = 85;  //GREEN
-	} else if (current_layer == 3) {
-		hsv.h = 43;  //YELLOW
-	} else if (current_layer == 4) {
-		hsv.h = 21;  //ORANGE
-	} else if (current_layer == 5) {
-		hsv.h = 192; //PURPLE
-	}
+	// レイヤー別インジケーターカラー
+	const uint8_t layer_hues[] = {0, 213, 85, 43, 21, 192};
+	if (current_layer >= sizeof(layer_hues)) return false;
+	HSV hsv = {layer_hues[current_layer], 255, rgb_matrix_get_val()};
 	RGB rgb = hsv_to_rgb(hsv);
 
 	// T/Y(row0), G/H(row1), B/N(row2) - 見下ろした時に中央に並ぶキー
