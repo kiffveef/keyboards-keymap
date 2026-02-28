@@ -3,11 +3,6 @@
 
 #pragma once
 
-#define VIAL_KEYBOARD_UID {0x74, 0x21, 0x95, 0xCB, 0x93, 0x42, 0xCF, 0x36}
-
-#define VIAL_UNLOCK_COMBO_ROWS {0, 0}
-#define VIAL_UNLOCK_COMBO_COLS {0, 1}
-
 #define DYNAMIC_KEYMAP_LAYER_COUNT 6
 
 // Vial GUIのComboタブでレイヤー直接移動(RGUI+数字キー位置)を設定可能にする
