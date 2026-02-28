@@ -5,7 +5,7 @@
 
 #define DYNAMIC_KEYMAP_LAYER_COUNT 6
 
-// Vial GUIのComboタブでレイヤー直接移動(RGUI+数字キー位置)を設定可能にする
+// Vial GUIのComboタブで追加コンボを設定可能にする
 #define VIAL_COMBO_ENTRIES 8
 
 // ホールド判定を300msに延長 (デフォルト200msだとMod-Tapがタップと誤判定される)
