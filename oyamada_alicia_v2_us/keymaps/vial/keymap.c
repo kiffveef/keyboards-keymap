@@ -163,7 +163,7 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 		{222, 194, 59},
 		{69, 125, 36},
 		{228, 147, 10},
-		{58, 72, 138},
+		{193, 57, 94},
 		{197, 50, 17},
 	};
 	if (current_layer >= sizeof(layer_colors) / sizeof(layer_colors[0])) return false;
